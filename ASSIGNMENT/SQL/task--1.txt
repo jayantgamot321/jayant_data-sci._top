@@ -1,0 +1,107 @@
+1) Return the FirstName, LastName , ProductName and Sales Price for all products sold in month of 
+October 2022 
+
+:--  SELECT tblcustomer.first_name,tblcustomer.last_name,tblsales.sales_price,tblproduct.prd_name FROM tblsales
+JOIN tblcustomer ON tblcustomer.cust_id=tblsales.cust_id_fk
+JOIN tblproduct ON tblproduct.prd_id=tblsales.prd_id_fk
+
+
+2) Return the CustomerID, FirstName, and LastName of those individuals in the Customer table who 
+have made no Sales purchases.
+
+:--  SELECT tblcustomer.first_name,tblcustomer.last_name,tblcustomer.cust_id FROM tblcustomer
+
+
+
+3) Return the FirstName, LastName, SalePrice, Recommended SalePrice, and the difference between the 
+SalePrice and Recommended SalePrice for all Sales. The difference must be returned as a positive 
+number.
+
+:---  SELECT tblcustomer.first_name,tblcustomer.last_name,tblsales.sales_price,tblproduct.recommended_price,tblproduct.recommended_price-tblsales.sales_price FROM tblsales
+JOIN tblcustomer ON tblcustomer.cust_id=tblsales.cust_id_fk
+JOIN tblproduct ON tblproduct.prd_id=tblsales.prd_id_fk
+
+4) Add the following Customer and Sale information to the database. (using store procedure) 
+FirstName : Mansi 
+LastName : Joshi
+City: Mumbai 
+State:MH 
+Zip:400001 
+ProductID:3 
+SalePrice:205 
+SaleDate:05/12/2022
+
+:---  
+
+delimiter $$
+
+
+create procedure insertdata(f varchar(200),l varchar(200),c varchar(200),s varchar(200),z int(255),p int(255),m int(255),n varchar(200))
+
+
+
+begin
+
+     insert into tblcustomer(first_name,last_name,city,state,zip) values(f,l,c,s,z);
+     insert INTO tblproduct(prd_id) VALUES(p); 
+     insert INTO tblsales(sales_price,sales_date) VALUES(m,n);
+
+
+END
+
+CALL Insertdata(mansi,joshi,mumbai,mh,400001,3,205,05/12/2022);
+
+
+5) Return the Product Category and the average Sale Price for those customers who have purchased two 
+or more products.
+
+:---- SELECT tblsales.sales_price,tblproduct.category,AVG(prd_id_fk>2) FROM tblsales
+JOIN tblproduct ON tblproduct.prd_id=tblsales.prd_id_fk;
+
+
+6) Update the Sale Price to the Recommended Sale Price of those Sales occurring between 
+6/10/2022and6/20/2022.
+
+:--- 
+
+DELIMITER $$
+
+CREATE TRIGGER update_trigger AFTER update ON tblsales FOR EACH ROW
+
+BEGIN
+
+
+insert INTO test(price,date,action_performed) VALUES(sales_price,sales_date,"record_updated!");
+
+
+END
+
+cll inaertdata()
+
+7) Number of Sales by Product Category where the average Recommended Priceis10 or more dollars 
+greater than the average Sale Price.
+
+:---- SELECT tblproduct.recommended_price,tblproduct.category,tblsales.sales_price,AVG(recommended_price>sales_price) FROM tblsales
+JOIN tblproduct ON tblproduct.prd_id=tblsales.prd_id_fk;
+
+8) Largest order taken by each salesperson, date wise.
+
+:----- SELECT tblsales.sales_price,tblsales.sales_date, max(tblsales.sales_price) from tblsales
+
+9) Without using a declared iterative construct, return Sale Date and the running total for all sales, 
+ordered by the Sale Date in Ascending Order.
+
+:---- SELECT tblsales.sales_date, tblsales.prd_id_fk  FROM tblsales
+ORDER BY sales_date ASC
+
+
+
+
+
+
+
+
+
+
+
+
