@@ -1,0 +1,55 @@
+SELECT * FROM product WHERE prd_name LIKE '%s'
+
+SELECT * FROM product WHERE prd_name LIKE '_r%'
+
+SELECT * FROM product WHERE prd_name LIKE '%e%'
+
+SELECT * FROM product WHERE prd_name LIKE 'D_%'
+
+SELECT * FROM product ORDER BY prd_name
+
+SELECT * FROM product ORDER BY prd_name DESC
+
+SELECT * FROM product ORDER BY prd_price
+
+SELECT * FROM product ORDER BY prd_name,prd_price
+
+SELECT * FROM product ORDER BY prd_name ASC,prd_price DESC
+
+
+Joins:-
+
+To join two table that are relation with one another
+
+
+We can combine two columns by using joins
+
+types of joins:-
+
+
+1) Inner join
+
+2) Outer join
+
+3) Left join
+
+4) Right join
+
+5) self join
+
+6) Full join
+
+
+
+SELECT category.cate_name,subcategory.subcate_name FROM category
+JOIN subcategory ON category.cate_id=subcategory.cate_id_fk
+
+
+SELECT category.cate_name,subcategory.subcate_name FROM category
+JOIN subcategory ON category.cate_id=subcategory.cate_id_fk
+JOIN product ON category.cate_id=product.cate_id_fk
+
+
+
+Task:- Make two tables student and teacher and join both the tables
+
