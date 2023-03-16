@@ -1,0 +1,47 @@
+******stored procedures****
+
+it is a function in sql that we can use again again
+
+syntax;-
+
+delimiter $$
+
+create procedure procedure name
+
+begin
+   
+
+    code......
+
+
+
+end
+
+
+CALL Insertdata();
+CALL Insertdata();
+CALL Insertdata();
+
+"""
+
+create procedure insertdiffdata(c int(255),j varchar(200))
+
+
+
+begin
+
+     insert into candidate(c_id,c_name) values(c,j)
+
+
+end
+
+
+
+
+
+
+
+
+
+
+
