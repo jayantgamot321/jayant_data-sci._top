@@ -1,0 +1,38 @@
+select * from table name order by prd_name
+
+select * from table name order by prd_name desc
+
+select * from table name order by prd_price
+
+select * from table name order by prd_name,prd_price 
+
+select * from tABLE NAME order by prd_name asc ,prd_price desc
+
+
+JOIN:-
+
+TO JOIN TWO TABLE THAT ARE RELATION WITH ONE ANOTHER
+
+WE CAN COMBINE TWO COLUMNS BY USING JOINS
+
+TYPES OF JOINS:--
+
+1) INNER JOIN
+
+2) OUTER JOIN
+
+3) LEFT JOIN
+
+4) RIGHT JOIN
+
+5) SELF JOIN
+
+6) FULL JOIN
+
+SELECT employee.E_salary,incentive.incentive_amount FROM employee
+JOIN incentive ON employee.E_id=incentive.E_id_fk
+
+
+
+
+ 
