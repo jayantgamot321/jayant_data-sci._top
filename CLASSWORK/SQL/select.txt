@@ -1,0 +1,23 @@
+select * from tablename
+
+select * from tablename where prd_id=1
+
+select * from tablename where prd_price=3000
+
+select * from tablename where prd_price>1000
+
+select * from tablename where prd_price<3000
+
+SELECT * FROM product WHERE prd_price BETWEEN 1000 AND 3000
+
+select * from product where prd_name like 'D%'
+
+SELECT * FROM product WHERE prd_name IN ("Dress","Diapers")
+
+select * form table name where prd_name like '%s'
+
+select * form table name where prd_name like '_r%'
+
+select * form table name where prd_name like '%e%'
+
+SELECT * FROM table name where prd_name like 'd_%'
