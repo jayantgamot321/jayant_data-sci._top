@@ -1,0 +1,58 @@
+*** triggers in sql:---
+
+
+CREATE TABLE test
+
+(
+ 	id int(200),
+    name varchar(200),
+    date_time timestamp,
+    action_performed varchar(200)
+)   
+
+## insert****
+
+DELIMITER $$
+
+CREATE TRIGGER insert_trigger AFTER INSERT ON restaurant FOR EACH ROW
+
+BEGIN
+
+
+INSERT INTO restaurant(food_items,price,desc_price,action_performed) VALUES(new.food_items,new.price,new.desc_price,"record_inserted!");
+
+
+END
+
+## update *****
+
+DELIMITER $$
+
+CREATE TRIGGER update_trigger AFTER update ON candidate FOR EACH ROW
+
+BEGIN
+
+
+insert INTO test(id,name,action_performed) VALUES(new.c_id,new.c_name,"record_updated!");
+
+
+END
+
+### delete ******
+
+DELIMITER $$
+
+CREATE TRIGGER delete_trigger AFTER delete ON candidate FOR EACH ROW
+
+BEGIN
+
+
+insert INTO test(id,name,action_performed) VALUES(old.c_id,old.c_name,"record_deleted!");
+
+
+END
+
+
+
+
+
