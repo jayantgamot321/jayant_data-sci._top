@@ -1,0 +1,53 @@
+Triggers in SQL
+
+
+CREATE TABLE test
+(
+ 	id int(200),
+    name varchar(200),
+    date_time timestamp,
+    action_performed varchar(200)
+    
+    
+    
+)
+
+
+
+
+DELIMITER $$
+
+CREATE TRIGGER insert_trigger AFTER INSERT ON candidate FOR EACH ROW
+BEGIN
+
+INSERT INTO test(id,name,action_performed) VALUES(new.c_id,new.c_name,"Record Inserted!");
+
+
+END
+
+
+
+DELIMITER $$
+
+CREATE TRIGGER insert_trigger50 AFTER INSERT ON candidates FOR EACH ROW
+BEGIN
+
+INSERT INTO test(id,name,action_performed) VALUES(new.c_id,new.c_name,"Record Inserted!");
+
+
+END
+
+
+DELIMITER $$
+
+CREATE TRIGGER delete_trigger50 AFTER DELETE ON candidates FOR EACH ROW
+BEGIN
+
+INSERT INTO test1(id,name,action_performed) VALUES(old.c_id,old.c_name,"Record Deleted!");
+
+
+END
+
+
+
+Jeet,ravi,rajbir,devansh,jayant
