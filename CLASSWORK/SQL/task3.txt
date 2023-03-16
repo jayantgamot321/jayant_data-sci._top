@@ -1,0 +1,26 @@
+1) show all the rows of those Students whose age is 20:
+
+:-- SELECT * FROM student WHERE stu_age = 20
+
+2) show the Subject_Name of those subjects whose Subject_ID is BCA103 and BCA106:
+
+:-- SELECT * FROM batch WHERE stu_subject_id='BCA103' OR stu_subject_id='BCA106'
+
+3) Write a query in SQL to find the minimum and maximum number from the integer column
+
+:--1 SELECT MAX(stu_marks) FROM student,
+  
+   SELECT MIN(stu_marks) FROM student 
+
+4)  Write a query to access the first record from the SQL table?
+
+:-- select *from student order by stu_id ASC LIMIT 1
+
+
+5) Write a query to access the last record from the table?
+
+:-- select *from student order by stu_id DESC LIMIT 1
+
+6)  Write a query in SQL to find the second-highest value of an integer column from the table?
+
+:-- 
