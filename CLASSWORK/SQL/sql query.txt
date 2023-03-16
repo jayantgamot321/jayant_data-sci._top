@@ -1,0 +1,79 @@
+1) DDL:-Data Definition Langauage-- create,truncate
+alter,drop
+
+2) DML:- Data Manipulation Language-- insert, update, delete
+
+Database Create:-
+
+create database database name
+
+table creation:-
+
+create table tablename
+(
+
+	candidate_id int(255),
+	c_name varchar(200),
+	c_mobile varchar(200),
+	c_address varchar(200)
+
+)
+
+
+
+alter TABLE candidate CHANGE candidate_id c_id int(200)
+
+
+delete table:-
+
+
+
+drop table tablename
+
+Insert values in table:-
+
+
+insert into tablename(col name) values();
+insert into tablename(col name) values();
+insert into tablename(col name) values();
+insert into tablename(col name) values()
+
+Task:- Create table students and enter the student id,name,subject and
+marks
+
+Task:- Create table employee and enter the employee id, name and salary
+of employee
+
+Jeet,Devansh,Kabir,Ravi,Jayant,Rajbir
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+insert into employee(emp_id,emp_name,contact_no,email_id,emphead_id,Department_id_fk) values(101,'isha',1234567890,'isha@gmail.com',105,'E-101');
+insert into employee(emp_id,emp_name,contact_no,email_id,emphead_id,Department_id_fk) values(102,'priya',1237896540,'priya@yahoo.com',103,'E-104');
+insert into employee(emp_id,emp_name,contact_no,email_id,emphead_id,Department_id_fk) values(103,'neha',9876543210,'neha@gmail.com',101,'E-101');
+insert into employee(emp_id,emp_name,contact_no,email_id,emphead_id,Department_id_fk) values(104,'rahul',3211654499,'rahul@yahoo.com',105,'E-102');
+insert into employee(emp_id,emp_name,contact_no,email_id,emphead_id,Department_id_fk) values(105,'abhishek',9876543210,'abhishek@gmail.com',102,'E-101');
+
+
+
+
+
+
+
+
