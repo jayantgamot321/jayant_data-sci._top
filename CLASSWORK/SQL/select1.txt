@@ -1,0 +1,11 @@
+select min(prd_price) from table name
+
+select max(prd_price) from table name
+
+SELECT COUNT(prd_name) FROM table name
+
+SELECT SUM(prd_price) FROM table name
+
+SELECT AVG(prd_price) FROM table name
+
+SELECT SUM(price + desc_price) FROM table name GROUP BY food_items
