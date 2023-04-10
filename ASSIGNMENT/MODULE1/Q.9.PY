@@ -1,3 +1,7 @@
+#9. Write a Python program to find the second #smallest number in a list.
+
+
+
 mylist = [9,8,7,5,65,41,25,32,6,1,3,2]
 
 mylist.sort()
