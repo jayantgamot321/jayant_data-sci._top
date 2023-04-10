@@ -1,3 +1,7 @@
+# 10. Write a Python program to get unique values from a list.
+
+
+
 number = [1,2,3,4,56,45,12,2,8,9,6,5,4,7,2,3]
 
 unique= list()
